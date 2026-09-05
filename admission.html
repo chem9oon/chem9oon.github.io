@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CHEM9OON : Join Member</title>
+<style>
+  html, body { margin:0; padding:0; background:#ededed; font-family: Tahoma, Arial, sans-serif; color:#222; }
+  body { font-size:12px; }
+  a { color:#5b2a86; text-decoration:underline; }
+  a:hover { color:#4f9b45; }
+  .page { width:1000px; margin:0 auto; background:white; border-left:1px solid #bbb; border-right:1px solid #bbb; }
+  .topline { height:8px; background:linear-gradient(90deg,#7a4aa5,#75c95f,#7a4aa5); border-bottom:1px solid #999; }
+  .utility { background:#f7f7f7; padding:4px 10px; text-align:right; color:#666; border-bottom:1px solid #ccc; font-size:11px; }
+  .header { display:flex; align-items:center; min-height:86px; padding:8px 14px; background:#fff; }
+  .seal { width:74px; height:74px; border:3px double #5b2a86; border-radius:50%; display:grid; place-items:center; font-family:Georgia,serif; font-weight:bold; font-size:23px; color:#4f9b45; background:radial-gradient(circle,#fff 46%,#f1ebf8 47%,#dff3d8 70%,#fff 71%); margin-right:14px; }
+  .headtext h1 { margin:0; font: bold 26px Georgia, 'Times New Roman', serif; color:#5b2a86; letter-spacing:1px; }
+  .headtext .thai { color:#4f9b45; font-size:16px; font-weight:bold; margin-top:4px; }
+  .headtext .tag { color:#777; margin-top:5px; }
+  .nav { background:#5b2a86; border-top:3px solid #8fd07a; border-bottom:3px solid #8fd07a; text-align:center; white-space:nowrap; }
+  .nav a { display:inline-block; color:white; text-decoration:none; font-weight:bold; padding:7px 15px; border-right:1px solid rgba(255,255,255,.45); }
+  .nav a:hover { background:#4f9b45; }
+  .ticker { background:#f2f7e9; color:#5b2a86; border-bottom:1px solid #a9c989; padding:5px 10px; overflow:hidden; white-space:nowrap; }
+  .layout { display:grid; grid-template-columns: 745px 245px; gap:10px; padding:10px; }
+  .box { border:1px solid #b7a6ca; margin-bottom:10px; background:#fff; }
+  .box-title { background:linear-gradient(#f5f0fa,#e7ddf1); color:#5b2a86; border-bottom:1px solid #b7a6ca; font-weight:bold; padding:6px 8px; }
+  .box-title.pink { background:linear-gradient(#eef8e9,#d8efcf); color:#4a8e42; }
+  .box-body { padding:9px; }
+  .welcome { text-align:center; padding:18px 20px 12px; }
+  .welcome .big { font: bold 21px Georgia,serif; color:#4f9b45; }
+  .welcome .sub { color:#5b2a86; font-weight:bold; margin-top:7px; }
+  .divider { color:#aaa; letter-spacing:3px; text-align:center; margin:8px 0; }
+  .news-item { padding:9px 4px; border-bottom:1px dotted #aaa; line-height:1.5; }
+  .news-item:last-child { border-bottom:0; }
+  .date { display:inline-block; min-width:72px; color:#4f9b45; font-weight:bold; }
+  .download { font-weight:bold; }
+  .feature-banner { border:1px solid #999; min-height:130px; background:linear-gradient(135deg,#11264b,#243a73 48%,#0b1c3a 48%); color:white; margin:8px 0 12px; position:relative; overflow:hidden; }
+  .feature-banner:before { content:""; position:absolute; inset:-60px auto auto -30px; width:330px; height:180px; background:linear-gradient(30deg,#ff72b2,#00bfe8); transform:rotate(-8deg); opacity:.8; }
+  .feature-copy { position:relative; padding:28px 25px; text-shadow:0 1px #000; }
+  .feature-copy strong { display:block; font-size:26px; font-family:Georgia,serif; letter-spacing:2px; }
+  .feature-copy span { font-size:14px; }
+  .quickgrid { display:grid; grid-template-columns:repeat(3,1fr); gap:7px; }
+  .quick { border:1px solid #c8c0d2; background:#fafafa; text-align:center; padding:9px 4px; min-height:58px; }
+  .quick b { display:block; color:#5b2a86; margin-bottom:4px; }
+  .sidebar-card { border:1px solid #aaa; margin-bottom:8px; text-align:center; background:white; }
+  .sidebar-card .inner { padding:7px; }
+  .ad { min-height:54px; display:grid; place-items:center; padding:7px; font-weight:bold; border:3px double #9f82ba; background:#f5effa; color:#5b2a86; font-size:13px; }
+  .ad.blue { border-color:#9fd28d; background:#f0faec; color:#4f8f45; }
+  .ad.dark { border-color:#444; background:#35204b; color:#fff; }
+  .ad.yellow { border-color:#86b96f; background:#eef8e8; color:#4f773f; }
+  .mini-links { text-align:left; line-height:1.8; padding:7px 9px; }
+  .counter { background:#111; color:#9cff7b; font:14px 'Courier New',monospace; padding:5px 8px; display:inline-block; border:2px inset #999; letter-spacing:2px; }
+  .footer-nav { text-align:center; padding:8px; background:#f1f1f1; border-top:1px solid #ccc; border-bottom:1px solid #ccc; color:#555; }
+  .footer { text-align:center; padding:12px 8px 18px; color:#666; font-size:11px; background:#fafafa; line-height:1.7; }
+  .blink { animation: blink 1.2s steps(1,end) infinite; color:#4f9b45; font-weight:bold; }
+  @keyframes blink { 50% { opacity:0; } }
+  @media (max-width: 1020px) {
+    .page { width:100%; }
+    .layout { grid-template-columns: 1fr; }
+    .sidebar { display:grid; grid-template-columns:repeat(2,1fr); gap:8px; }
+    .sidebar-card { margin-bottom:0; }
+  }
+  @media (max-width: 620px) {
+    .header { align-items:flex-start; }
+    .seal { width:58px; height:58px; font-size:18px; flex:0 0 auto; }
+    .headtext h1 { font-size:20px; }
+    .nav { white-space:normal; }
+    .nav a { padding:7px 8px; }
+    .quickgrid, .sidebar { grid-template-columns:1fr; }
+  }
+
+  /* Join Member page only */
+  .join-intro { padding:16px 18px; line-height:1.7; }
+  .join-intro h2 { margin:0 0 5px; color:#5b2a86; font: bold 21px Georgia, 'Times New Roman', serif; }
+  .join-note { border:1px dashed #8b76a1; background:#fbf9fd; padding:8px 10px; margin:10px 0 2px; }
+  .steps { padding:4px 10px 12px; }
+  .step { display:grid; grid-template-columns:58px 1fr; border-bottom:1px dotted #aaa; padding:13px 5px; }
+  .step:last-child { border-bottom:0; }
+  .step-no { width:44px; height:44px; border:3px double #5b2a86; background:#eef8e9; color:#4f8f45; display:grid; place-items:center; font:bold 18px Georgia,serif; }
+  .step h3 { margin:0 0 5px; color:#5b2a86; font-size:14px; }
+  .step p { margin:3px 0 7px; line-height:1.6; }
+  .old-button { display:inline-block; padding:4px 9px; border:2px outset #bbb; background:#efefef; color:#222 !important; text-decoration:none !important; font-weight:bold; }
+  .old-button:active { border-style:inset; }
+  .old-button.green { background:#e7f5e1; color:#386f32 !important; }
+  .oath { margin:7px 0; border-left:4px solid #7a4aa5; background:#f7f2fb; padding:9px 11px; font-family:'Times New Roman',serif; font-size:13px; line-height:1.7; }
+  .join-table { width:100%; border-collapse:collapse; margin-top:4px; }
+  .join-table th, .join-table td { border:1px solid #b7a6ca; padding:7px; vertical-align:top; }
+  .join-table th { width:150px; text-align:left; background:#f4eef9; color:#5b2a86; }
+  .complete { text-align:center; padding:18px 10px; background:#f2faef; border:1px solid #a7cf98; }
+  .complete strong { display:block; color:#4f8f45; font: bold 20px Georgia,serif; margin-bottom:5px; }
+  @media (max-width:620px) { .step { grid-template-columns:48px 1fr; } .step-no { width:36px; height:36px; font-size:15px; } }
+
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="topline"></div>
+  <div class="utility">CHEM9OON ONLINE &nbsp;|&nbsp; ภาษาไทย &nbsp;|&nbsp; English &nbsp;|&nbsp; Sitemap</div>
+
+  <header class="header">
+    <div class="seal">C9</div>
+    <div class="headtext">
+      <h1>CHEM9OON</h1>
+      <div class="thai">เว็บไซต์อย่างเป็นทางการของ CHEM9OON</div>
+      <div class="tag">“Nine minds, one orbit.” — Community • Projects • Activities • Archive</div>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <a href="#">หน้าแรก</a><a href="#about">เกี่ยวกับเรา</a><a href="#news">ข่าวสาร</a><a href="#activities">กิจกรรม</a><a href="#members">สมาชิก</a><a href="#gallery">Gallery</a><a href="#links">Link</a><a href="#contact">ติดต่อ</a>
+  </nav>
+
+  <div class="ticker"><span class="blink">NEW!</span> ยินดีต้อนรับเข้าสู่เว็บไซต์ CHEM9OON &nbsp; • &nbsp; เปิดระบบคลังภาพและเอกสารแล้ว &nbsp; • &nbsp; อัปเดตล่าสุด 27 สิงหาคม 2569</div>
+
+  <div class="layout">
+    <main>
+      <section class="box">
+        <div class="box-title">สมัครเป็นสมาชิก CHEM9OON</div>
+        <div class="join-intro">
+          <h2>JOIN CHEM9OON</h2>
+          <b>ขั้นตอนการสมัครสมาชิกอย่างเป็นทางการ</b>
+          <p>ผู้ประสงค์จะเข้าร่วม CHEM9OON กรุณาดำเนินการตามขั้นตอนด้านล่างให้ครบถ้วน โดยเรียงตามลำดับตั้งแต่การดาวน์โหลดใบสมัครจนถึงพิธีปฏิญาณตน</p>
+          <div class="join-note"><b>หมายเหตุ :</b> การส่งใบสมัครไม่ได้หมายความว่าเป็นสมาชิกโดยทันที สถานะสมาชิกจะสมบูรณ์เมื่อผ่านขั้นตอนที่ 3 แล้ว</div>
+        </div>
+      </section>
+
+      <section class="box">
+        <div class="box-title pink">ขั้นตอนการสมัครสมาชิก</div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-no">1</div>
+            <div>
+              <h3>ดาวน์โหลดใบสมัครสมาชิก</h3>
+              <p>ดาวน์โหลดแบบฟอร์ม CHEM9OON Membership Application แล้วกรอกข้อมูลให้ครบถ้วน สามารถพิมพ์หรือกรอกด้วยลายมือได้ตามสะดวก</p>
+              <a class="old-button" href="CHEM9OON_Membership_Application.pdf" download>ดาวน์โหลดใบสมัคร (.PDF)</a>
+              &nbsp; <a href="#requirements">[ ดูเอกสารที่ต้องใช้ ]</a>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-no">2</div>
+            <div>
+              <h3>ส่งใบสมัคร</h3>
+              <p>ตรวจสอบข้อมูลและส่งใบสมัครผ่านช่องทางรับสมัครของ CHEM9OON เมื่อได้รับแล้ว เจ้าหน้าที่จะตรวจสอบและแจ้งกำหนดการขั้นตอนถัดไป</p>
+              <a class="old-button green" href="#submit">ส่งใบสมัครออนไลน์ &gt;&gt;</a>
+              &nbsp; <a href="#status">ตรวจสอบสถานะใบสมัคร</a>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-no">3</div>
+            <div>
+              <h3>เข้าพิธีปฏิญาณตน (Swear In)</h3>
+              <p>ผู้สมัครที่ได้รับการรับรองจะต้องเข้าร่วมพิธีปฏิญาณตนต่อ CHEM9OON ตามวัน เวลา และสถานที่ที่ประกาศ</p>
+              <div class="oath">“I hereby swear to uphold the name, spirit, and unnecessarily serious traditions of CHEM9OON.”</div>
+              <small>* ถ้อยคำปฏิญาณฉบับที่ใช้จริงจะแจ้งอีกครั้งในวันพิธี</small>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-no">4</div>
+            <div>
+              <h3>เสร็จสิ้น — ยินดีต้อนรับสู่ CHEM9OON</h3>
+              <p>เมื่อปฏิญาณตนเรียบร้อยแล้ว ชื่อของคุณจะถูกเพิ่มเข้าสู่ทะเบียนสมาชิก และถือว่าเป็นสมาชิก CHEM9OON อย่างเป็นทางการ</p>
+              <a href="#members">เข้าสู่ Member Directory &gt;&gt;</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="box" id="requirements">
+        <div class="box-title">ข้อมูลสำหรับผู้สมัคร</div>
+        <div class="box-body">
+          <table class="join-table">
+            <tr><th>แบบฟอร์ม</th><td>CHEM9OON Membership Application</td></tr>
+            <tr><th>วิธีการส่ง</th><td>ส่งผ่านระบบออนไลน์ หรือช่องทางที่คณะผู้ดูแลกำหนด</td></tr>
+            <tr><th>หลังส่งใบสมัคร</th><td>รอการตรวจสอบและประกาศรายชื่อผู้มีสิทธิ์เข้าพิธีปฏิญาณตน</td></tr>
+            <tr><th>สถานะสมาชิก</th><td>มีผลหลังเสร็จสิ้นพิธีปฏิญาณตนเท่านั้น</td></tr>
+          </table>
+        </div>
+      </section>
+
+      <section class="box" id="submit">
+        <div class="box-title pink">ระบบรับใบสมัคร</div>
+        <div class="box-body">
+          <div class="complete">
+            <strong>APPLICATION SUBMISSION</strong>
+            ระบบรับสมัครสมาชิก CHEM9OON<br><br>
+            <a class="old-button green" href="#">[ คลิกที่นี่เพื่อส่งใบสมัคร ]</a>
+            <br><br><small>โปรดเก็บสำเนาใบสมัครของท่านไว้จนกว่ากระบวนการสมัครจะเสร็จสิ้น</small>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside class="sidebar" id="links">
+      <div class="sidebar-card"><div class="inner"><div class="ad yellow">ประกาศสำคัญ<br><small>กรุณาอ่านก่อนส่งใบสมัครสมาชิก</small></div></div></div>
+      <div class="sidebar-card"><div class="box-title pink">จำนวนผู้เข้าชม</div><div class="inner"><div class="counter">0087009</div><br><small>ตั้งแต่เปิดเว็บไซต์</small></div></div>
+    </aside>
+  </div>
+
+  <div class="footer-nav">หน้าแรก | ข่าวสาร | Gallery | Link | ติดต่อ | Intranet | Site Map</div>
+  <footer class="footer" id="contact">
+    <b>CHEM9OON</b><br>
+    Officially not a chemistry organization.<br>
+    Copyright © 2026 CHEM9OON. All rights reserved.<br>
+    เว็บไซต์นี้ออกแบบให้ดูเก่ากว่าที่มันเป็นโดยตั้งใจ
+  </footer>
+</div>
+</body>
+</html>
