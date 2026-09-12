@@ -9,7 +9,25 @@
   body { font-size:12px; }
   a { color:#5b2a86; text-decoration:underline; }
   a:hover { color:#4f9b45; }
-  .page { width:1000px; margin:0 auto; background:white; border-left:1px solid #bbb; border-right:1px solid #bbb; }
+
+  .page {
+  width:1000px;
+  max-width:100%;
+  margin:0 auto;
+  background:white;
+  border-left:1px solid #bbb;
+  border-right:1px solid #bbb;
+  box-sizing:border-box;
+}
+
+.layout {
+  display:grid;
+  grid-template-columns:1fr 245px;
+  gap:10px;
+  padding:10px;
+  box-sizing:border-box;
+}
+  
   .topline { height:8px; background:linear-gradient(90deg,#7a4aa5,#75c95f,#7a4aa5); border-bottom:1px solid #999; }
   .utility { background:#f7f7f7; padding:4px 10px; text-align:right; color:#666; border-bottom:1px solid #ccc; font-size:11px; }
   .header { display:flex; align-items:center; min-height:86px; padding:8px 14px; background:#fff; }
@@ -21,7 +39,6 @@
   .nav a { display:inline-block; color:white; text-decoration:none; font-weight:bold; padding:7px 15px; border-right:1px solid rgba(255,255,255,.45); }
   .nav a:hover { background:#4f9b45; }
   .ticker { background:#f2f7e9; color:#5b2a86; border-bottom:1px solid #a9c989; padding:5px 10px; overflow:hidden; white-space:nowrap; }
-  .layout { display:grid; grid-template-columns: 745px 245px; gap:10px; padding:10px; }
   .box { border:1px solid #b7a6ca; margin-bottom:10px; background:#fff; }
   .box-title { background:linear-gradient(#f5f0fa,#e7ddf1); color:#5b2a86; border-bottom:1px solid #b7a6ca; font-weight:bold; padding:6px 8px; }
   .box-title.pink { background:linear-gradient(#eef8e9,#d8efcf); color:#4a8e42; }
