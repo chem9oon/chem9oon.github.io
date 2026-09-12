@@ -56,6 +56,16 @@
   .feature-copy { position:relative; padding:28px 25px; text-shadow:0 1px #000; }
   .feature-copy strong { display:block; font-size:26px; font-family:Georgia,serif; letter-spacing:2px; }
   .feature-copy span { font-size:14px; }
+  .feature-banner-alt { position:relative; overflow:hidden; margin:10px 0 16px; padding:18px 20px; background:linear-gradient(135deg,#32105f 0%,#4c1684 48%,#6923a5 100%); border:1px solid #240b45; border-top:5px solid #72b84a; color:#fff; font-family:Tahoma,Arial,sans-serif; box-shadow:inset 0 1px 0 rgba(255,255,255,0.25),0 2px 4px rgba(0,0,0,0.22); }
+.feature-banner-alt::after { content:""; position:absolute; top:-30px; right:-40px; width:180px; height:180px; background:rgba(255,255,255,0.06); border:18px solid rgba(255,255,255,0.04); transform:rotate(35deg); }
+.feature-banner-alt .feature-label { display:inline-block; margin-bottom:7px; padding:3px 7px; background:#78bd4d; border:1px solid #4e8c2f; color:#17230f; font-size:10px; font-weight:bold; text-transform:uppercase; letter-spacing:1px; }
+.feature-banner-alt h2 { position:relative; z-index:2; margin:0 0 5px; color:#fff; font-size:25px; line-height:1.1; font-weight:bold; text-shadow:1px 1px 0 #260842; }
+.feature-banner-alt p { position:relative; z-index:2; width:75%; margin:0 0 12px; color:#e8dcf5; font-size:12px; line-height:1.6; }
+.feature-banner-alt .feature-button { position:relative; z-index:2; display:inline-block; padding:5px 12px; background:#f4f4f4; border-top:1px solid #fff; border-left:1px solid #fff; border-right:1px solid #777; border-bottom:1px solid #777; color:#4c1684; font-size:11px; font-weight:bold; text-decoration:none; }
+.feature-banner-alt .feature-button:hover { background:#dff0d3; color:#315e1c; }
+.feature-banner-alt .feature-link { position:relative; z-index:2; margin-left:10px; color:#d9f4ca; font-size:11px; text-decoration:underline; }
+.feature-banner-alt .feature-link:hover { color:#fff; }
+.feature-banner-alt .feature-status { position:absolute; z-index:3; top:8px; right:10px; padding:2px 5px; border:1px solid rgba(255,255,255,0.35); color:#e9dff4; font-size:9px; letter-spacing:0.5px; }
   .quickgrid { display:grid; grid-template-columns:repeat(3,1fr); gap:7px; }
   .quick { border:1px solid #c8c0d2; background:#fafafa; text-align:center; padding:9px 4px; min-height:58px; }
   .quick b { display:block; color:#5b2a86; margin-bottom:4px; }
@@ -119,6 +129,7 @@
       <section class="box" id="news">
         <div class="box-title pink">ประกาศ / ข่าวประชาสัมพันธ์</div>
         <div class="box-body">
+          <div class="news-item"><span class="date">12/09/69</span><b>การสอบปลายภาคใกล้เข้ามา</b><br>ขอให้สมาชิกและผู้ติดตามทุกคนโชคดีในการสอบปลายภาคในสัปดาห์ที่จะถึงนี้</div>
           <div class="news-item"><span class="date">03/09/69</span><b>ลาแล้วมาม่า</b><br>ขอเชิญสมาชิก CHEM9OON และผู้ติดตามทุกท่าน ร่วมแสดงความยินดีและมุทิตาจิตแก่ "มาม่า" นกเลี้ยงประจำตึก 72 พรรษาอย่างไม่เป็นทางการ และสมาชิกคน(ตัว)ที่ 7 ของ CHEM9OON เนื่องในโอกาสมีผู้รับเลี้ยงใหม่<br>ด้วยความยินดียิ่ง<br>3 กันยายน 2569</div>
           <div class="news-item"><span class="date">27/08/69</span><b>เปิดตัวเว็บไซต์ CHEM9OON</b><br>ยินดีต้อนรับสู่เว็บไซต์ของพวกเรา อ่านข่าวได้ที่นี่</div>
           
@@ -128,25 +139,21 @@
       <section class="box" id="activities">
         <div class="box-title">กิจกรรมเด่น CHEM9OON</div>
         <div class="box-body">
+          <div class="feature-banner-alt">
+            <div class="feature-copy"><strong>Final Exam Revision</strong><span>กิจกรรมติวสอบก่อนสอบปลายภาค<br><a href="https://drive.google.com/drive/folders/1DvDHEH4sY89JGLNSGqR91aTZCX9Vn-SV?usp=sharing">ชมภาพกิจกรรมได้ที่นี่</a></span></div>
+          </div>
           <div class="feature-banner">
             <div class="feature-copy"><strong>CHEM9OON GAMES 2026</strong><span>- CHEM9OON SUMMATIVE CHAMPIONSHIP 2026<br>- CHEM9OON WORDLE SERIES Season1&2</span></div>
           </div>
-          <div style="text-align:center">ชมกิจกรรมต่างๆ เร็วๆนี้</div>
         </div>
       </section>
 
       <section class="box" id="about">
-        <div class="box-title pink">บริการและเมนูด่วน</div>
-        <!--
+        <div class="box-title pink">ลิงก์ด่วน</div>
         <div class="box-body quickgrid">
-          <div class="quick"><b>CHEM9OON Archive</b><a href="#">เข้าสู่คลังเอกสาร</a></div>
-          <div class="quick"><b>Member Directory</b><a href="#">รายชื่อสมาชิก</a></div>
-          <div class="quick"><b>Project Center</b><a href="#">โครงการทั้งหมด</a></div>
-          <div class="quick"><b>Gallery</b><a href="#">คลังภาพกิจกรรม</a></div>
-          <div class="quick"><b>Guestbook</b><a href="#">ลงชื่อเยี่ยมชม</a></div>
-          <div class="quick"><b>Webboard</b><a href="#">กระดานสนทนา</a></div>
+          <div class="quick"><b>Instagram</b><a href="https://instagram.com/chem9oon">Click here</a></div>
+          <div class="quick"><b>ฟอร์มร้องเรียน</b><i>เร็ว ๆ นี้</i></div>
         </div>
-        -->
       </section>
     </main>
 
