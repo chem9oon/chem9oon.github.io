@@ -39,6 +39,6 @@ footer { padding:16px; text-align:center; color:#777; line-height:1.8; font-size
   const el=document.getElementById('amount');
   const fmt=new Intl.NumberFormat('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
   function update(){const elapsed=(Date.now()-start)/1000;const value=initial+elapsed*rate;el.textContent='฿'+fmt.format(value);}
-  update();setInterval(update,500);
+  update();setInterval(update,100);
 })();
 </script></body></html>
